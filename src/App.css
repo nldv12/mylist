@@ -1,8 +1,6 @@
 .App {
   background-color: #282c34;
-
 }
-
 .App-header {
   margin-left: 50px;
   min-height: 100vh;
@@ -14,7 +12,7 @@
 
 .myTitle {
   margin-right: 30px;
-  color: red;
+  color: gold;
   margin-bottom: 30px;
 }
 .myList {
@@ -22,10 +20,67 @@
   text-align: left;
 }
 .myListElement {
-  margin: 10px 0;
-  transition: transform .2s;
+  display: flex;
+  margin: 50px 0;
+  transition: transform 0.5s;
+  transform-origin: left;
+
+}
+.myListElement_img img {
+  height: 300px;
+  width: 300px;
 }
 .myListElement:hover {
   cursor: pointer;
-  color: gold;
+  transform: scale(1.02);
+  transform-origin: left;
+}
+
+.btn {
+  margin-right: 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 15px;
+  color: #ececec;
+  background-color: #805000;
+  padding: 10px;
+  width: 150px;
+  transition: 1s;
+}
+.btn:hover {
+  cursor: pointer;
+transform: scale(1.1);
+}
+
+.myListElement_content {
+  margin-left: 20px;
+}
+.el_name {
+  color: red;
+  font-size: calc(20px + 2vmin);
+}
+.el_status {}
+.el_species {}
+.el_type {}
+.el_gender {}
+.el_image {}
+.el_created {
+  color: green;
+  font-size: calc(3px + 2vmin);
+
+}
+
+@media (max-width: 720px) {
+  .myListElement_img img {
+    height: 200px;
+    width: auto;
+  }
+}
+@media (max-width: 480px) {
+  .myListElement {
+    flex-direction: column;
+  }
+  .myListElement_content {
+     margin-left: 0;
+  }
 }
